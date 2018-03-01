@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jstree basic demos</title>
+	
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	
+	<div id="data" class="demo"></div>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	<script src="jstree.min.js"></script>
+	<script>
+	// html demo
+	$('#html').jstree();
+
+	// inline data demo
+	$('#data').jstree({
+		'core' : {
+			'data' : [
+				{ "text" : "Delivery Manager", "children" : [
+						{ "text" : "Project Manager 1", "children":[{"text":"Developer 1"}] },
+						{ "text" : "Project Manager 2", "children":[{"text":"Developer 1"}] }
+				]}
+			]
+		}
+	});	
+	</script>
+</body>
+</html>

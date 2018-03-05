@@ -6,24 +6,23 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<div id="data" class="demo jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j1_5" aria-busy="false">
-		<ul class="jstree-container-ul jstree-children jstree-no-icons" role="group">
-			<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="j1_1_anchor" aria-expanded="true" id="j1_1" class="jstree-node jstree-last jstree-open">
-				<i class="jstree-icon jstree-ocl" role="presentation"></i>
-				<a class="jstree-anchor" href="#" tabindex="-1" id="j1_1_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Delivery Manager</a>
-					<ul role="group" class="jstree-children" style="">
-						<li role="treeitem" aria-selected="false" aria-level="2" aria-labelledby="j1_2_anchor" aria-expanded="true" id="j1_2" class="jstree-node jstree-open"><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="#" tabindex="-1" id="j1_2_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Project Manager 1</a>
-							<ul role="group" class="jstree-children" style="">
-								<li role="treeitem" aria-selected="false" aria-level="3" aria-labelledby="j1_3_anchor" id="j1_3" class="jstree-node  jstree-leaf jstree-last"><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="#" tabindex="-1" id="j1_3_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Developer 1</a></li>
-							</ul>
-						</li>
-						<li role="treeitem" aria-selected="false" aria-level="2" aria-labelledby="j1_4_anchor" aria-expanded="true" id="j1_4" class="jstree-node jstree-last jstree-open"><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor" href="#" tabindex="-1" id="j1_4_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Project Manager 2</a>
-							<ul role="group" class="jstree-children" style="">
-								<li role="treeitem" aria-selected="true" aria-level="3" aria-labelledby="j1_5_anchor" id="j1_5" class="jstree-node  jstree-leaf jstree-last"><i class="jstree-icon jstree-ocl" role="presentation"></i><a class="jstree-anchor jstree-clicked" href="#" tabindex="-1" id="j1_5_anchor"><i class="jstree-icon jstree-themeicon" role="presentation"></i>Developer 1</a></li>
-							</ul>
-						</li>
-					</ul>
+	<div id="html">
+		<ul>
+		  <li>Root node 1
+			<ul>
+			  <li>Child node 1</li>
+			  <li><a href="#">Child node 2</a></li>
+			  li>Child node 1</li>
+			  <li><a href="#">Child node 2</a>
+				<ul>
+				  <li>Child node 1</li>
+				  <li><a href="#">Child node 2</a></li>
+				  li>Child node 1</li>
+				  <li><a href="#">Child node 2</a></li>
+				</ul>
 			</li>
+			</ul>
+		  </li>
 		</ul>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -34,12 +33,6 @@
 	$('#html').jstree();
 	$('#data').jstree({
 		'core' : {
-			'data' : [
-				{ "text" : "Delivery Manager", "children" : [
-						{ "text" : "Project Manager 1", "children":[{"text":"Developer 1"}] },
-						{ "text" : "Project Manager 2", "children":[{"text":"Developer 1"}] }
-				]}
-			],
 			"themes":{
 				"icons":false
 			}
